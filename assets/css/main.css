@@ -57,7 +57,8 @@
   scroll-behavior: smooth;
 }
 header{
-  border-bottom: 2px solid #67963E;
+  background: #fff !important;
+  box-shadow: 0 0 15px #00000015;
 }
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
@@ -370,10 +371,19 @@ form textarea{
     padding-right: 0;
   }
   .portfolio .col-md-6{
-    background: #00000010;
-    padding: 20px;
-    box-shadow: 0 0 15px #00000010 inset;
     
+    padding: 20px;
+    
+    
+  }
+  .portfolio .section-title p{
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 20px;
+    background: #00000010;
+    border-radius: 15px;
+    border: 1px solid #df152950;
   }
  
   .top-g{
@@ -974,7 +984,7 @@ section,
   position: absolute;
   z-index: -1;
   opacity: 1;
-  background-image: url("../../img/3.jpg");
+  background-image: url("../img/Cam_Balkon_05.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
@@ -1214,6 +1224,10 @@ section,
   margin: -30px -30px 15px -30px;
   overflow: hidden;
 }
+.post-img img{
+  width: 100%;
+  object-fit: cover;
+}
 .recent-posts .post-category {
   font-size: 16px;
   color:
@@ -1259,16 +1273,25 @@ section,
   color: var(--accent-color);
 }
 .icon-r-card {
-  background:#f5f5dc75;
+  background:#fff;
   padding: 15px;
   text-align: center;
-  border: 2px solid #0000001f;
-  border-radius: 15px;
+  border: 1px solid #0000001f;
+  border-radius: 5px;
   box-shadow: 0 0 15px #0000001c;
- width: 100%;
+ width: calc(300px - 10px);
+ height: 300px;
+ margin-right: 10px;
 }
-
-
+.about .row{
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+.floater .icon-r-card{
+  width: 48%;
+  margin: 5px;
+}
 /*--------------------------------------------------------------
 # Clients Section
 --------------------------------------------------------------*/
@@ -1448,6 +1471,15 @@ section,
   list-style: none;
   text-align: center;
 }
+.portfolio-more{
+  position: relative;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(to right, #059652, #059652);
+  padding: 10px;
+  z-index: 9;
+}
 
 .portfolio .portfolio-filters li {
   cursor: pointer;
@@ -1464,7 +1496,11 @@ section,
 .portfolio .portfolio-filters li.filter-active {
   color: var(--accent-color);
 }
-
+.mobileas{
+  display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .portfolio .portfolio-filters li:first-child {
   margin-left: 0;
 }
@@ -1474,6 +1510,12 @@ section,
 }
 
 @media (max-width: 575px) {
+  .mobileas {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
   .portfolio .portfolio-filters li {
     font-size: 14px;
     margin: 0 5px;
@@ -1507,6 +1549,7 @@ section,
 }
 
 .portfolio .portfolio-content .portfolio-info h4 {
+  text-align: left;
   font-size: 18px;
   font-weight: 600;
   padding-right: 50px;
@@ -1533,6 +1576,7 @@ section,
   
 }
 .portfolio-link-href{
+  text-align: left;
   text-decoration: underline;
   padding: 8px 0;
   border-radius: 50px;
@@ -1864,13 +1908,42 @@ section,
 # Contact Section
 --------------------------------------------------------------*/
 .contact {
-  background-image: url("../img/contact-bg.png");
+
   background-position: left center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
 }
+ .tab-content .card {
+   text-align: center;
+ }
+h5.card-title{
+  position: relative;
+  font-size: 16px;
+  color: #df1529;
+ z-index: 9;
+text-shadow: 0 0 50px #000;
+}
+button.nav-link, button.nav-link:hover{
+  color: #df1529;
+ 
+}
+.card{
+  height: 600px;
+  transition: .5s ease all;
+  overflow: hidden;
+}
 
+
+ .card img {
+   height: 100%;
+   width: 100%;
+   object-fit: cover;
+   transition: .3s ease all;
+ }
+ .card img:hover {
+   transform: scale(1.2);
+ }
 @media (max-width: 640px) {
   .contact {
     background-position: center 50px;
